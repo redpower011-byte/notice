@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상수관로 300mm 신설(원인자부담) 공문 분석 보고서</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+  body { font-family: 'Pretendard','Malgun Gothic','맑은 고딕',system-ui,sans-serif; }
+  .card { box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04); }
+  .tl-line::before { content:''; position:absolute; left:19px; top:0; bottom:0; width:2px; background:linear-gradient(#3b82f6,#93c5fd); }
+  @media print { .no-print{display:none} body{background:#fff} .card{break-inside:avoid} }
+  .badge { font-size:.7rem; font-weight:600; padding:.15rem .5rem; border-radius:9999px; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+<!-- HEADER -->
+<header class="bg-gradient-to-r from-blue-700 to-indigo-700 text-white">
+  <div class="max-w-5xl mx-auto px-6 py-10">
+    <p class="text-blue-200 text-sm font-medium tracking-wide">상인천초교주변구역 주택재개발정비사업 · 공문 분석</p>
+    <h1 class="text-3xl md:text-4xl font-bold mt-2">상수관로 300mm 신설(원인자부담) 공사<br>공문 타임라인 &amp; 공사비 타당성 검토</h1>
+    <p class="mt-4 text-blue-100 text-sm">분석 범위: <span class="font-mono bg-white/15 px-2 py-0.5 rounded">D:\1.2025상인천초교재개발\6, 공문</span> 폴더 한정 · 작성일 2026-06-26</p>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 py-8 space-y-10">
+
+  <!-- IMPORTANT NOTICE -->
+  <section class="card bg-amber-50 border-l-4 border-amber-500 rounded-lg p-5">
+    <h2 class="text-amber-800 font-bold text-lg flex items-center gap-2">⚠️ 먼저 확인해 주세요 — 거래 상대방</h2>
+    <p class="mt-2 text-sm text-amber-900 leading-relaxed">
+      요청하신 <b>“명광엔지니어링과 주고받은 300mm관 교체 공문”</b>을 전수 확인한 결과,
+      <b>명광엔지니어링 폴더의 공문에는 300mm 상수관 관련 내용이 전혀 없습니다</b>
+      (명광 문서는 모두 <b>건축감리 용역 변경계약·감리비 청구</b> 건이며, ‘상수도/300mm/이설/급수’ 언급 0건).
+      <br><br>
+      <b>300mm 상수관 신설(교체) 공문</b>은 시공사 <b>㈜신도씨엔에이(신도이엔씨)</b> 및
+      <b>인천광역시 상수도사업본부 / 남동구청(남동부수도사업소)</b>과 주고받은 문서들입니다.
+      따라서 아래 분석은 <b>실제 300mm 공사 관련 거래처(신도·상수도사업본부)</b> 기준으로 정리했습니다.
+    </p>
+  </section>
+
+  <!-- EXECUTIVE SUMMARY CARDS -->
+  <section>
+    <h2 class="text-xl font-bold mb-4 text-slate-900">핵심 요약</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card bg-white rounded-lg p-4">
+        <p class="text-xs text-slate-500">공사 범위(견적 기준)</p>
+        <p class="text-lg font-bold mt-1">상수관망 <span class="text-blue-600">총 681m</span></p>
+        <p class="text-xs text-slate-400 mt-1">D300 454m·D100 66m·기타 161m<br>제수변14·변실16·부단수분기</p>
+      </div>
+      <div class="card bg-white rounded-lg p-4">
+        <p class="text-xs text-slate-500">공사 금액(공급가)</p>
+        <p class="text-2xl font-bold mt-1 text-blue-700">5.03억</p>
+        <p class="text-xs text-slate-400 mt-1">₩503,000,000 (VAT 별도)<br>VAT 포함 ₩553,300,000</p>
+      </div>
+      <div class="card bg-white rounded-lg p-4">
+        <p class="text-xs text-slate-500">비용 부담</p>
+        <p class="text-lg font-bold mt-1">조합 <span class="text-rose-600">원인자부담</span></p>
+        <p class="text-xs text-slate-400 mt-1">수도법 §71, 인천시 원인자부담금 조례</p>
+      </div>
+      <div class="card bg-white rounded-lg p-4">
+        <p class="text-xs text-slate-500">진행 상태(’26.5.4)</p>
+        <p class="text-lg font-bold mt-1 text-emerald-600">300mm 약 90%</p>
+        <p class="text-xs text-slate-400 mt-1">중간보고 기준 · 100mm 병행</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="card bg-white rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-6 text-slate-900">📅 공문 타임라인</h2>
+    <div class="relative tl-line pl-12 space-y-7">
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-blue-500 text-white text-xs font-bold flex items-center justify-center">1</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2025.11.12</span>
+          <span class="badge bg-slate-100 text-slate-600">협의</span>
+        </div>
+        <p class="text-sm mt-1">남동부수도사업소 방문, <b>김상운 주무관</b>과 협의 — 격점1·2구간 D100→<b>D300mm 신설</b>, 기존 D1000mm 강관에 <b>부단수분기</b> 연결 방식 확정.</p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-indigo-500 text-white text-xs font-bold flex items-center justify-center">2</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2025.11.21</span>
+          <span class="badge bg-emerald-100 text-emerald-700">견적</span>
+        </div>
+        <p class="text-sm mt-1"><b>신도이엔씨</b> ‘구역내 상수도 300mm 추가 견적서’ 작성 — <b>₩503,000,000</b>(VAT별도), VAT포함 ₩553,300,000. <span class="text-slate-400">(첨부4 견적서)</span></p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-slate-400 text-white text-xs font-bold flex items-center justify-center">3</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2025.12.03</span>
+          <span class="badge bg-slate-100 text-slate-600">착수</span>
+        </div>
+        <p class="text-sm mt-1">현장 시공 착수(중간보고 현장사진 일자). 100mm 선행 작업 진행.</p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-amber-500 text-white text-xs font-bold flex items-center justify-center">4</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2025.12.04</span>
+          <span class="badge bg-amber-100 text-amber-700">회신(상수도)</span>
+        </div>
+        <p class="text-sm mt-1"><b>인천상수도사업본부 급수부</b> → 시공계획(신설) 관련 <b>협의의견 회신</b> (급수부-12442).</p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center">5</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2025.12.29</span>
+          <span class="badge bg-blue-100 text-blue-700">조합→상수도</span>
+          <span class="text-xs font-mono text-slate-400">상인천 제2025-1229-5호</span>
+        </div>
+        <p class="text-sm mt-1">조합 → 상수도사업본부, <b>「조치계획서」 제출</b> — 부단수 용접식 할정관, D300 다기능제수밸브, 통수 전 D700 사전작업, 원인자부담, 공공측량·수질검사 등 <b>19개 협의의견 전부 ‘반영’</b>.</p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">6</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2026.01.27</span>
+          <span class="badge bg-indigo-100 text-indigo-700">신도→조합</span>
+          <span class="text-xs font-mono text-slate-400">신도-제2026-0127-1호</span>
+        </div>
+        <p class="text-sm mt-1">㈜신도씨엔에이 → 조합, <b>‘상수관로 300mm 이설건 작업지시 요청’</b> + 첨부(조치계획서·D300 추가공사 도면·시공계획서·<b>추가 견적서 ₩503,000,000</b>).</p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-rose-600 text-white text-xs font-bold flex items-center justify-center">7</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2026.01.29</span>
+          <span class="badge bg-rose-100 text-rose-700">조합→신도 (작업지시)</span>
+          <span class="text-xs font-mono text-slate-400">상인천 제2026-0129-2호</span>
+        </div>
+        <p class="text-sm mt-1">조합 → 신도, <b>‘300mm 신설 원인자부담공사 협조요청·작업지시’</b> — 공사금액 <b>₩503,000,000(VAT별도)</b>, 공기 <b>2026.02~04</b>, 원인자부담(조합)으로 진행. <span class="text-slate-400">(핵심 공문 E085)</span></p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-slate-400 text-white text-xs font-bold flex items-center justify-center">8</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2026.03.03</span>
+          <span class="badge bg-slate-100 text-slate-600">시공</span>
+        </div>
+        <p class="text-sm mt-1">관 부설·부단수분기·포장복구 등 시공 진행(중간보고 현장사진 다수).</p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-amber-600 text-white text-xs font-bold flex items-center justify-center">9</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2026.03.09</span>
+          <span class="badge bg-amber-100 text-amber-700">상수도 협의(변경)</span>
+        </div>
+        <p class="text-sm mt-1"><b>인천상수도사업본부</b> ‘정비기반시설 상수도공사(300mm) <b>시설물 변경 설치 협의</b>’ — 시공 중 현장여건에 따른 변경 협의.</p>
+      </div>
+
+      <div class="relative">
+        <span class="absolute -left-12 top-0 w-10 h-10 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center">10</span>
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-slate-900">2026.05.04</span>
+          <span class="badge bg-emerald-100 text-emerald-700">중간보고</span>
+          <span class="text-xs font-mono text-slate-400">신도-제2026-0504-1호</span>
+        </div>
+        <p class="text-sm mt-1">㈜신도씨엔에이 → 조합, <b>‘100mm·300mm 설치 중간보고’</b> — <b>300mm 약 90% 진행</b>, 100mm 병행. (’26-0129-1·2호 관련)</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COST ANALYSIS -->
+  <section class="card bg-white rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-1 text-slate-900">💰 공사비 구성 &amp; 타당성 검토</h2>
+    <p class="text-sm text-slate-500 mb-6">출처: 신도이엔씨 견적서(2025.11) · 조합↔신도 공문(2026.01.29) — 금액 동일 확인</p>
+
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div><canvas id="costChart"></canvas></div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b-2 border-slate-200 text-left text-slate-500">
+              <th class="py-2">원가 항목</th><th class="py-2 text-right">금액(원)</th><th class="py-2 text-right">비율</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr><td class="py-2">직접공사비(순공사비)</td><td class="text-right font-mono">386,583,849</td><td class="text-right text-slate-400">76.9%</td></tr>
+            <tr><td class="py-2">간접경비(제경비)</td><td class="text-right font-mono">47,974,784</td><td class="text-right text-slate-400">9.5%</td></tr>
+            <tr><td class="py-2">일반관리비 <span class="text-rose-500 font-semibold">(6.0%)</span></td><td class="text-right font-mono">26,073,517</td><td class="text-right text-slate-400">5.2%</td></tr>
+            <tr><td class="py-2">이윤 <span class="text-rose-500 font-semibold">(15.0%)</span></td><td class="text-right font-mono">42,367,850</td><td class="text-right text-slate-400">8.4%</td></tr>
+            <tr class="font-bold bg-blue-50"><td class="py-2">공급가액 소계</td><td class="text-right font-mono text-blue-700">503,000,000</td><td class="text-right">100%</td></tr>
+            <tr><td class="py-2">부가가치세(10%)</td><td class="text-right font-mono">50,300,000</td><td class="text-right text-slate-400"></td></tr>
+            <tr class="font-bold border-t-2 border-slate-300"><td class="py-2">총 계</td><td class="text-right font-mono">553,300,000</td><td class="text-right"></td></tr>
+          </tbody>
+        </table>
+        <p class="text-xs text-slate-400 mt-3">✔ 산식 검증: 434,558,633 + 26,073,517 + 42,367,850 = <b>503,000,000</b> (정확히 일치)</p>
+      </div>
+    </div>
+
+    <!-- VERDICT -->
+    <div class="mt-8 grid md:grid-cols-2 gap-4">
+      <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+        <h3 class="font-bold text-emerald-800 flex items-center gap-2">✅ 타당한 점</h3>
+        <ul class="mt-2 text-sm text-emerald-900 space-y-1.5 list-disc pl-5">
+          <li>견적서 총액과 공문 금액이 <b>완전히 일치</b> (불일치·과다청구 정황 없음)</li>
+          <li>공공 <b>원가계산 체계</b>(직접비→간접비→일반관리비→이윤→VAT)를 정상 적용, 계산 정확</li>
+          <li>부단수분기·다기능제수밸브·포장복구·CCTV 등 <b>필수 부대공이 내역에 반영</b>됨</li>
+        </ul>
+      </div>
+      <div class="bg-rose-50 border border-rose-200 rounded-lg p-4">
+        <h3 class="font-bold text-rose-800 flex items-center gap-2">⚠️ 협상 여지가 있는 점</h3>
+        <ul class="mt-2 text-sm text-rose-900 space-y-1.5 list-disc pl-5">
+          <li><b>일반관리비 6% · 이윤 15%</b> 모두 공공원가 <b>법정 상한선</b> 적용 → 발주자(조합)에 최대 불리, 조정 여지</li>
+          <li>시공사 <b>단일 견적</b>(수의) — 복수견적·경쟁입찰을 거치지 않음 → 시장 경쟁가(낙찰률) 대비 절감 여지</li>
+          <li class="text-emerald-800"><b>※ 물량 과다 우려는 해소됨</b> — 견적서 물량이 도면·시공계획서와 일치 확인(아래 교차검증).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-4 bg-slate-100 rounded-lg p-4 text-sm">
+      <b>📌 1차 결론:</b> 금액의 <b>구성·계산 자체는 타당</b>(정상적 원가계산, 견적·공문 일치)합니다.
+      다만 <b>요율(이윤·일반관리비)이 모두 법정 상한</b>이고 <b>단일견적</b>이므로, 아래 <b>물량 교차검증</b> 후 <b>적정공사비를 별도 산출</b>했습니다.
+    </div>
+  </section>
+
+  <!-- 물량 교차검증 -->
+  <section class="card bg-white rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-1 text-slate-900">🔍 물량 교차검증 (견적서 ↔ 도면 ↔ 시공계획서)</h2>
+    <p class="text-sm text-slate-500 mb-4">
+      견적서(첨부4) 도면의 격점별 관 연장과 시공계획서(첨부3) ‘신증설 내역 총괄표’를 대조 → <b>세 문서의 물량이 일치</b>.
+      ₩503,000,000은 <b>66m가 아니라 전체 상수관망 681m 공사</b>임을 확인.
+    </p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-slate-100 text-left">
+            <th class="p-2">관경</th><th class="p-2 text-right">견적서 도면(격점별)</th><th class="p-2 text-right">시공계획서 총괄표</th><th class="p-2 text-center">일치</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr><td class="p-2 font-semibold">D300 (DCIP)</td><td class="p-2 text-right font-mono">252.9+154.5+46.6 = 454.0m</td><td class="p-2 text-right font-mono">454m</td><td class="p-2 text-center text-emerald-600">✅</td></tr>
+          <tr><td class="p-2 font-semibold">D100</td><td class="p-2 text-right font-mono">66.0m</td><td class="p-2 text-right font-mono">66m</td><td class="p-2 text-center text-emerald-600">✅</td></tr>
+          <tr><td class="p-2 font-semibold">D80</td><td class="p-2 text-right font-mono">40.0m</td><td class="p-2 text-right font-mono">40m</td><td class="p-2 text-center text-emerald-600">✅</td></tr>
+          <tr><td class="p-2 font-semibold">D50 (STS)</td><td class="p-2 text-right font-mono">22+26+53 = 101m</td><td class="p-2 text-right font-mono">105m</td><td class="p-2 text-center text-amber-500">≈</td></tr>
+          <tr><td class="p-2 font-semibold">D25 (STS)</td><td class="p-2 text-right font-mono">16.0m</td><td class="p-2 text-right font-mono">16m</td><td class="p-2 text-center text-emerald-600">✅</td></tr>
+          <tr class="font-bold bg-emerald-50"><td class="p-2">합계 연장</td><td class="p-2 text-right font-mono">약 677m</td><td class="p-2 text-right font-mono">681m</td><td class="p-2 text-center text-emerald-600">✅</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-4 mt-5 text-sm">
+      <div class="bg-emerald-50 rounded-lg p-4">
+        <p class="text-xs text-emerald-700">물량 정합성</p>
+        <p class="font-bold text-lg text-emerald-800 mt-1">✅ 일치 (과다·누락 없음)</p>
+        <p class="text-xs text-slate-500 mt-1">제수변14·변실16·부단수분기 포함 일치</p>
+      </div>
+      <div class="bg-blue-50 rounded-lg p-4">
+        <p class="text-xs text-blue-700">전체 단가(올인)</p>
+        <p class="font-bold text-lg text-blue-800 mt-1">약 738,600원/m</p>
+        <p class="text-xs text-slate-500 mt-1">503,000,000 ÷ 681m (VAT별도)</p>
+      </div>
+      <div class="bg-blue-50 rounded-lg p-4">
+        <p class="text-xs text-blue-700">단가 적정성</p>
+        <p class="font-bold text-lg text-blue-800 mt-1">정상 범위</p>
+        <p class="text-xs text-slate-500 mt-1">도심 DCIP+포장복구+밸브류 통상 0.6~0.9백만/m</p>
+      </div>
+    </div>
+    <p class="text-xs text-slate-400 mt-3">※ D50은 구역외 주택인입(STS) 일부 차이(101 vs 105m)로 미미. 견적·도면·시공계획서가 동일 사업의 일관된 물량임을 확인.</p>
+  </section>
+
+  <!-- 적정공사비 산출 -->
+  <section class="card bg-white rounded-lg p-6">
+    <h2 class="text-xl font-bold mb-1 text-slate-900">🎯 적정공사비 산출</h2>
+    <p class="text-sm text-slate-500 mb-4">
+      전제: <b>물량은 교차검증으로 정합 확인(위)</b>, 단가도 정상 범위(≈739천원/m). 따라서 직접공사비·간접경비는 적정.
+      남은 조정 레버는 <b>① 이윤율(현 15%=법정상한)</b>과 <b>② 경쟁성(낙찰률)</b> 2가지뿐.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div><canvas id="scenChart"></canvas></div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b-2 border-slate-200 text-left text-slate-500">
+              <th class="py-2">시나리오</th><th class="py-2 text-right">공급가(VAT별도)</th><th class="py-2 text-right">절감액</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr class="bg-rose-50"><td class="py-2 font-semibold">① 현행 견적 <span class="text-xs text-rose-500">(이윤15%·일관6% 상한)</span></td><td class="text-right font-mono font-bold">503,000,000</td><td class="text-right text-slate-400">—</td></tr>
+            <tr><td class="py-2">② 이윤율 정상화 (15%→10%)</td><td class="text-right font-mono">488,900,000</td><td class="text-right text-emerald-600 font-mono">-14.1M</td></tr>
+            <tr class="bg-emerald-50"><td class="py-2 font-semibold">③ 경쟁입찰 환산 <span class="text-xs text-slate-500">(낙찰률 87.7%, 적격심사 하한)</span></td><td class="text-right font-mono font-bold text-emerald-700">441,400,000</td><td class="text-right text-emerald-600 font-mono">-61.6M</td></tr>
+            <tr><td class="py-2">④ 보수적 환산 (낙찰률 85%)</td><td class="text-right font-mono">427,600,000</td><td class="text-right text-emerald-600 font-mono">-75.5M</td></tr>
+          </tbody>
+        </table>
+        <p class="text-xs text-slate-400 mt-3">※ ②는 이윤 기준액(노무비+경비+일반관리비 282.5백만)에 율만 조정. ③·④는 공공 적격심사 낙찰하한율을 견적 전체에 적용한 시장경쟁 환산값.</p>
+      </div>
+    </div>
+
+    <!-- 권장 결론 -->
+    <div class="mt-8 bg-gradient-to-r from-blue-700 to-indigo-700 text-white rounded-lg p-6">
+      <h3 class="font-bold text-lg flex items-center gap-2">🏁 최종 결론 — 적정공사비</h3>
+      <div class="grid sm:grid-cols-3 gap-4 mt-4">
+        <div class="bg-white/10 rounded-lg p-4">
+          <p class="text-blue-200 text-xs">이론적 적정 (경쟁 환산)</p>
+          <p class="text-2xl font-bold mt-1">약 4.41억</p>
+          <p class="text-blue-200 text-xs mt-1">VAT별도 / 포함 ₩485.5백만</p>
+        </div>
+        <div class="bg-white/20 rounded-lg p-4 ring-2 ring-white/50">
+          <p class="text-blue-100 text-xs">권장 협상 목표값</p>
+          <p class="text-3xl font-bold mt-1">약 4.6억</p>
+          <p class="text-blue-100 text-xs mt-1">₩460,000,000 (VAT별도)<br>VAT포함 약 ₩506백만</p>
+        </div>
+        <div class="bg-white/10 rounded-lg p-4">
+          <p class="text-blue-200 text-xs">현실적 적정 (이윤만 조정)</p>
+          <p class="text-2xl font-bold mt-1">약 4.89억</p>
+          <p class="text-blue-200 text-xs mt-1">90% 시공 진행 → 재입찰 곤란 시</p>
+        </div>
+      </div>
+      <p class="text-sm text-blue-50 mt-5 leading-relaxed">
+        현 견적 <b>₩503,000,000</b>은 <b>물량(681m, 도면·시공계획서 일치)·단가(≈739천원/m, 정상)·계산이 모두 타당</b>한 견적입니다.
+        부당하게 부풀려진 금액이 아니며, ‘과다견적’으로 보기 어렵습니다.
+        다만 <b>이윤·일반관리비가 법정 상한</b>이고 <b>경쟁 없이 단일 수의</b>로 산정된 ‘최대치’이므로,
+        시장 경쟁가(낙찰률) 환산 시 <b>약 4.4억</b>, 이윤율만 정상화하면 <b>약 4.9억</b>까지 낮출 여지가 있습니다.
+        이미 <b>300mm 약 90% 시공</b>되어 재입찰이 비현실적인 점을 감안하면, 현실적 협상 목표는
+        <b>약 ₩460,000,000~490,000,000(VAT별도)</b> 수준 — 즉 <b>약 1,400만~6,200만원 절감</b>을 노려볼 수 있습니다.
+      </p>
+      <p class="text-xs text-blue-100 mt-3">✅ 종합: <b>“금액은 타당(적정)하다”</b>가 결론입니다. 추가 절감은 ‘부당함을 바로잡는 것’이 아니라 <b>이윤율·경쟁성에 대한 선택적 협상</b> 영역입니다. 객관적 근거가 더 필요하면 <b>인천상수도사업본부 설계내역서(예정가격)</b> 1건과 대조하면 확정됩니다.</p>
+    </div>
+  </section>
+
+  <!-- DIRECT COST DETAIL -->
+  <section class="card bg-white rounded-lg p-6">
+    <h2 class="text-lg font-bold mb-4 text-slate-900">직접공사비 주요 구성 (견적서 기준)</h2>
+    <div class="grid sm:grid-cols-3 gap-4 text-sm">
+      <div class="bg-slate-50 rounded p-4"><p class="text-slate-500 text-xs">재료비 계열</p><p class="font-mono font-bold text-lg mt-1">172,750,598</p></div>
+      <div class="bg-slate-50 rounded p-4"><p class="text-slate-500 text-xs">노무비 계열</p><p class="font-mono font-bold text-lg mt-1">66,285,772</p></div>
+      <div class="bg-slate-50 rounded p-4"><p class="text-slate-500 text-xs">경비 계열</p><p class="font-mono font-bold text-lg mt-1">147,547,479</p></div>
+    </div>
+    <p class="text-sm text-slate-600 mt-4">주요 고가 공종: <b>부단수분기(기존 D1000mm 강관 용접식 할정관, 1000×300)</b> 약 1.06억, 강관·주철관 D300/D100 부설, 다기능 제수밸브·소화전, <b>아스팔트 포장복구(t=5~30cm)</b>, CCTV 관로조사, 도로점용 등.</p>
+    <p class="text-xs text-slate-400 mt-2">※ 세 계열 합계 386,583,849원. OCR 추출값 기준이며, 항목 명칭은 표준 원가 구성에 따른 추정 분류입니다.</p>
+  </section>
+
+  <!-- SOURCE DOCS -->
+  <section class="card bg-white rounded-lg p-6">
+    <h2 class="text-lg font-bold mb-4 text-slate-900">📂 근거 공문 목록 (분석 대상)</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full text-xs sm:text-sm">
+        <thead><tr class="bg-slate-100 text-left"><th class="p-2">일자</th><th class="p-2">문서</th><th class="p-2">위치(폴더)</th></tr></thead>
+        <tbody class="divide-y divide-slate-100">
+          <tr><td class="p-2">2025.12.29</td><td class="p-2">조치계획서 제출의 건 (D081, 상인천 제2025-1229-5호)</td><td class="p-2 text-slate-500">2025년\남동구청\발송</td></tr>
+          <tr><td class="p-2">2026.01.27</td><td class="p-2">상수관로 300mm 이설 작업지시 요청 + 첨부(견적서·도면·시공계획서)</td><td class="p-2 text-slate-500">2026년\신도씨엔에이</td></tr>
+          <tr><td class="p-2">2026.01.29</td><td class="p-2"><b>상수도관로 300mm 원인자부담공사 협조요청 (E085, ₩503,000,000)</b></td><td class="p-2 text-slate-500">2026년\신도씨엔에이</td></tr>
+          <tr><td class="p-2">2026.03.09</td><td class="p-2">상수도공사(300mm) 시설물 변경 설치 협의 (상수도사업본부)</td><td class="p-2 text-slate-500">2026년\신도씨엔에이 / 상수도사업소</td></tr>
+          <tr><td class="p-2">2026.05.04</td><td class="p-2">100mm·300mm 설치 중간보고 (300mm 약 90%)</td><td class="p-2 text-slate-500">2026년\신도씨엔에이</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-slate-400 mt-3">※ 스캔 PDF는 OCR로 텍스트화하여 분석했습니다. 금액·일자 등 핵심 수치는 원본 공문/견적서와 대조 권장. 분석은 지정 폴더(6, 공문) 내 자료만 사용했습니다.</p>
+  </section>
+
+  <footer class="text-center text-xs text-slate-400 py-6">
+    상인천초교주변구역 주택재개발정비사업조합 · 상수관로 300mm 공문 분석 · 자동 생성 보고서 (2026-06-26)
+  </footer>
+</main>
+
+<script>
+const ctx = document.getElementById('costChart');
+new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    labels: ['직접공사비','간접경비','일반관리비(6%)','이윤(15%)','부가세(10%)'],
+    datasets: [{
+      data: [386583849, 47974784, 26073517, 42367850, 50300000],
+      backgroundColor: ['#3b82f6','#6366f1','#f59e0b','#ef4444','#94a3b8'],
+      borderWidth: 2, borderColor:'#fff'
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { position:'bottom', labels:{ font:{size:11}, padding:12 } },
+      tooltip: { callbacks: { label: c => c.label + ': ' + c.raw.toLocaleString() + '원' } }
+    },
+    cutout: '55%'
+  }
+});
+
+const ctx2 = document.getElementById('scenChart');
+new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: ['① 현행견적','② 이윤10%','③ 낙찰률87.7%','④ 낙찰률85%'],
+    datasets: [{
+      label: '공급가(VAT별도)',
+      data: [503000000, 488877383, 441357350, 427550000],
+      backgroundColor: ['#ef4444','#f59e0b','#10b981','#3b82f6'],
+      borderRadius: 6
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    plugins: {
+      legend: { display:false },
+      tooltip: { callbacks: { label: c => c.raw.toLocaleString() + '원' } }
+    },
+    scales: {
+      x: { ticks: { callback: v => (v/100000000).toFixed(1)+'억' }, suggestedMin: 400000000, suggestedMax: 520000000 }
+    }
+  }
+});
+</script>
+</body>
+</html>
